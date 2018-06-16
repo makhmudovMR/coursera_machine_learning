@@ -1,3 +1,7 @@
+'''
+ Linear Regression With Multiple Variable
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -9,7 +13,7 @@ learning_rate = 0.01
 print(X)
 print(Y)
 
-print()
+print('----------------------')
 
 
 predict = np.dot(X, params)
@@ -28,7 +32,7 @@ for i in range(epochs):
 
 predict = np.dot(X, params)
 error = (predict - Y) ** 2
-print()
+print('-----------------------')
 print("error after:", error)
 print("params after:", params)
 
