@@ -2,14 +2,13 @@ import numpy as np
 
 class LogisticRegression:
 
-    def __init__(self, lr=0.01, num_iter=10000, fit_intercept=True, verbose = False, theta = []):
+    def __init__(self, lr=0.01, num_iter=10000, fit_intercept=True, verbose = False):
         '''
         Initialization of parameters
         '''
         self.lr = lr
         self.num_iter = num_iter
         self.fit_intercept = fit_intercept
-        self.theta = theta
         self.verbose = verbose
 
 
@@ -62,5 +61,9 @@ class LogisticRegression:
     def predict(self, X, threshold = 0.5):
         return self.predict_prob(X) >= threshold
 
-    
+def main():
+    model = LogisticRegression(lr = 0.1, num_iter=1000)
+
+if __name__ == "__main__":
+    main()
     
