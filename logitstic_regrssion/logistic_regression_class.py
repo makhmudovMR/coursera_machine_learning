@@ -1,4 +1,5 @@
 import numpy as np
+import sklearn.datasets
 
 class LogisticRegression:
 
@@ -63,6 +64,11 @@ class LogisticRegression:
 
 def main():
     model = LogisticRegression(lr = 0.1, num_iter=1000)
+    iris = sklearn.datasets.load_iris()
+    X = iris.data[:, :2]
+    y = (iris.target != 0) * 1
+    model.fit(X, y)
+    print(model.theta)
 
 if __name__ == "__main__":
     main()
